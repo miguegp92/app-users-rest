@@ -42,3 +42,5 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+src/assets/login-carousel.jpg
+src/assets/logo.png

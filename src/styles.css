@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+  border: 1px black solid;
+}
+
+div.flotante {
+  width: 30%;
+  float: left;
+  margin: 3px;
+  padding: 3px;
+}
+
+.clear{
+  clear: both;
+}

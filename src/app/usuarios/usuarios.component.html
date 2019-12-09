@@ -1,0 +1,35 @@
+<div class="grid-container">
+  <div class="item1">
+    <header>
+      <h4>Front end - Angular
+        <span><i class="fas fa-sign-out-alt"></i></span>
+      </h4>
+
+    </header>
+  </div>
+  <div class="item2">
+    <nav>
+      <a [routerLink]="'/'"><img src="assets/logo.png" title="SDOS" alt="SDOS"></a>
+      <ul>
+        <li>
+          <a [routerLink]="'/dashboard'">Usuarios</a>
+        </li>
+      </ul>
+
+    </nav>
+  </div>
+  <div class="item3">
+    <table width="100%">
+      <tr>
+        <td>Usuario</td>
+        <td>Nombre y Apellidos</td>
+        <td>Email</td>
+      </tr>
+      <tr *ngFor="let usuario of usuarios" (click)="redirectToDetails(usuario.id)">
+        <td>{{ usuario.username}}</td>
+        <td>{{ usuario.name}}</td>
+        <td>{{ usuario.email}}</td>
+      </tr>
+    </table>
+  </div>
+</div>

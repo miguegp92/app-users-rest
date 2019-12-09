@@ -1,0 +1,32 @@
+/*nav {*/
+/*  display: block;*/
+/*  width: 15%;*/
+/*}*/
+
+img{
+  width: 100px;
+}
+
+/*nav, header{*/
+/*  float: right;*/
+/*}*/
+header{
+  background: #142B7D;
+  color: white;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-bottom: 5px;
+}
+
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'menu header header header header'
+    'menu main main main main';
+}
+

@@ -1,0 +1,17 @@
+img{
+  width: 100px;
+}
+
+*{
+  padding: 5px;
+  margin: 5px;
+}
+
+.enter{
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background: dodgerblue;
+  color: white;
+}
