@@ -24,4 +24,8 @@ export class RestService {
     return this.http.get(this.configUrl + `/${from}/${key}`);
     // return this.http.get(this.configUrl + `/${from}/${this.setKeySearch(from)}=${key}`);
   }
+  getDataByKey(from:string, key: number){
+    return this.http.get(this.configUrl + `/${from}?userId=${key}`);
+    // return this.http.get(this.configUrl + `/${from}/${this.setKeySearch(from)}=${key}`);
+  }
 }

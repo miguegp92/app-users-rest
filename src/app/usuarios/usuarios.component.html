@@ -19,17 +19,26 @@
     </nav>
   </div>
   <div class="item3">
-    <table width="100%">
+    <h1>Listado de usuarios</h1>
+    <table class="tabla">
+      <thead>
       <tr>
-        <td>Usuario</td>
-        <td>Nombre y Apellidos</td>
-        <td>Email</td>
+        <td></td>
+        <td>USUARIO</td>
+        <td>NOMBRE Y APELLIDOS</td>
+        <td>EMAIL</td>
       </tr>
+      </thead>
+
+      <tbody>
       <tr *ngFor="let usuario of usuarios" (click)="redirectToDetails(usuario.id)">
+        <td>{{ usuario.id}}</td>
         <td>{{ usuario.username}}</td>
         <td>{{ usuario.name}}</td>
         <td>{{ usuario.email}}</td>
       </tr>
+      </tbody>
+
     </table>
   </div>
 </div>

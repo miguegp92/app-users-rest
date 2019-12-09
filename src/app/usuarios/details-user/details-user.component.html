@@ -1,0 +1,77 @@
+<div class="grid-container">
+  <div class="item1">
+    <header>
+      <h4>Front end - Angular
+        <span><i class="fas fa-sign-out-alt"></i></span>
+      </h4>
+
+    </header>
+  </div>
+  <div class="item2">
+    <nav>
+      <a [routerLink]="'/'"><img src="assets/logo.png" title="SDOS" alt="SDOS"></a>
+      <ul>
+        <li>
+          <a [routerLink]="'/dashboard'">Usuarios</a>
+        </li>
+      </ul>
+
+    </nav>
+  </div>
+  <div class="item3">
+    <h3>Editar usuario</h3>
+
+    <div class="flotante">
+      <p>
+        <label for="username">Usuario</label>
+        <br/>
+        <input type="text" id="username" value="{{ usuario.username}}">
+      </p>
+    </div>
+
+    <div class="flotante">
+      <p>
+        <label for="name">Nombre y apellidos</label>
+        <br/>
+        <input type="text" id="name" value="{{ usuario.name}}">
+      </p>
+    </div>
+
+    <div class="flotante">
+      <p>
+        <label for="email">Email</label>
+        <br/>
+        <input type="text" id="email" value="{{ usuario.email}}">
+      </p>
+    </div>
+
+    <div class="flotante">
+      <p>
+        <label for="usuario">Dirección</label>
+        <br/>
+        <input type="text" id="usuario" value="{{ usuario.name}}">
+      </p>
+    </div>
+
+    <div class="flotante">
+      <p>
+        <label for="phone">Teléfono</label>
+        <br/>
+        <input type="text" id="phone" value="{{ returnFullAdress }}">
+      </p>
+    </div>
+    <div>
+      <h3>Albumes</h3>
+
+      <h3>Entradas</h3>
+    </div>
+
+    <div class="clear">
+      <p>
+        <button type="button"  class="cancelar" onClick="window.history.back()">Cancelar</button>
+      </p>
+    </div>
+  </div>
+</div>
+
+

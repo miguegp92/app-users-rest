@@ -1,8 +1,10 @@
-/*nav {*/
-/*  display: block;*/
-/*  width: 15%;*/
-/*}*/
-
+.cancelar{
+  float: right;
+  margin-left: 10px;
+  padding: 5px;
+  background: #142B7D;
+  color: white;
+}
 img{
   width: 100px;
 }
@@ -64,3 +66,4 @@ header{
 .tabla tbody{
   color: #142B7D;
 }
+

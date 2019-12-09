@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {RestService} from '../services/rest.service';
+import {RestService} from '../../services/rest.service';
 
 @Component({
   selector: 'app-details-user',
@@ -10,19 +10,37 @@ import {RestService} from '../services/rest.service';
 export class DetailsUserComponent implements OnInit {
 
   id: number;
-  usuario: any;
+  usuario: any = {};
+  albums: any = [];
+  comments: any = [];
   constructor(private route: ActivatedRoute, private request: RestService) {
     this.id = this.route.snapshot.params['user'];
   }
 
   ngOnInit() {
     this.getUserData();
+    this.getAlbums();
+    this.getComments();
   }
 
   getUserData(){
-    this.request.getDataById('users', this.id).subscribe(usuario=> {
-      console.log('usuario', usuario)
+    this.request.getDataById('users', this.id).subscribe(usuario => {
       this.usuario = usuario;
+    });
+  }
+
+  getAlbums(){
+    this.request.getDataByKey('albums', this.id).subscribe(data => {
+      this.albums = data;
+      console.log('this.albums, ', data)
+    });
+
+  }
+
+  getComments(){
+    this.request.getDataByKey('posts', this.id).subscribe(data => {
+      console.log('this.comments, ',data);
+      this.comments = data;
     });
   }
 

@@ -1,12 +1,24 @@
 img{
   width: 100px;
 }
-
+section{
+  top: 200px;
+}
 *{
   padding: 5px;
   margin: 5px;
 }
+.input{
+  width: 95%;
+  margin-right: 3px;
+  border: 0;
+  border-bottom: grey solid;
+}
 
+.checkbox{
+  border: #142B7D outset;
+  background-color: white;
+}
 .enter{
   padding-left: 15px;
   padding-right: 15px;
@@ -14,4 +26,9 @@ img{
   padding-top: 5px;
   background: dodgerblue;
   color: white;
+  font-weight: bold;
+  border: 0;
+  text-align: center;
+  width: 120px;
+  height: 40px;
 }

@@ -7,7 +7,7 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
 import { LoginComponent } from './home/login/login.component';
 import { HomeComponent } from './home/home.component';
 import {HttpClientModule} from '@angular/common/http';
-import { DetailsUserComponent } from './details-user/details-user.component';
+import { DetailsUserComponent } from './usuarios/details-user/details-user.component';
 
 @NgModule({
   declarations: [
