@@ -8,19 +8,21 @@ import { LoginComponent } from './home/login/login.component';
 import { HomeComponent } from './home/home.component';
 import {HttpClientModule} from '@angular/common/http';
 import { DetailsUserComponent } from './usuarios/details-user/details-user.component';
+import {UsuariosModule} from './usuarios/usuarios.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UsuariosComponent,
+    // UsuariosComponent,
     LoginComponent,
     HomeComponent,
-    DetailsUserComponent
+    // DetailsUserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    UsuariosModule
   ],
   providers: [],
   bootstrap: [AppComponent]

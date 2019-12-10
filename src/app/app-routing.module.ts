@@ -13,15 +13,10 @@ const routes: Routes = [
     path: '*',
     component: HomeComponent
   },
-  {
-    path: 'dashboard',
-    component: UsuariosComponent
-  },
-  {
-    path: 'details/:user',
-    component: DetailsUserComponent
-  },
-
+   {
+     path: 'dashboard',
+     loadChildren: './usuarios/usuarios.module#UsuariosModule'
+   },
 ];
 
 @NgModule({

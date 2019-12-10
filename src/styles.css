@@ -2,6 +2,9 @@
 /**{*/
 /*  border: 1px black solid;*/
 /*}*/
+body{
+  font-family: 'Roboto', sans-serif;
+}
 
 div.flotante {
   width: 30%;
@@ -12,4 +15,19 @@ div.flotante {
 
 .clear{
   clear: both;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.pull-right{
+  float: right;
+}
+
+.subrayado{
+  text-decoration: underline;
+}
+.negrita{
+  font-weight: bold;
 }

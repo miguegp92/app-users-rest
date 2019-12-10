@@ -1,0 +1,12 @@
+<p>albums works!</p>
+<div>
+  <h2>#{{ album.id }} - {{ album.title }}</h2>
+  <div>
+    <p *ngFor="let photo of photos">
+      <a [href]="photo.url" [title]="photo.title" target="_blank"><img [src]="photo.thumbnailUrl"></a>
+    </p>
+  </div>
+  <pre>
+    {{ photos | json }}
+  </pre>
+</div>

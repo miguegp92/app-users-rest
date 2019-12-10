@@ -23,7 +23,10 @@ export class UsuariosComponent implements OnInit {
   }
 
   redirectToDetails(id: number){
-    this.router.navigate([`/details/${id}`]);
+    this.router.navigate([`details/${id}`]);
+  }
+  volverAtras(){
+    window.history.back();
   }
 }
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import {RestService} from '../../services/rest.service';
 
 @Component({
   selector: 'app-login',
@@ -8,13 +9,16 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private route: Router) { }
+  constructor(private route: Router, private http: RestService) {
+    window['app'] = this;
+  }
 
   ngOnInit() {
   }
 
   login(){
-    this.route.navigate(['/dashboard']);
+    // this.http.fillDataService().then( ok => this.route.navigate(['/dashboard'] ) );
+     this.route.navigate(['/dashboard']);
   }
 
 }

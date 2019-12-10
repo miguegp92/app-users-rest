@@ -18,6 +18,7 @@ export class DetailsUserComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log('OK')
     this.getUserData();
     this.getAlbums();
     this.getComments();
@@ -30,16 +31,18 @@ export class DetailsUserComponent implements OnInit {
   }
 
   getAlbums(){
-    this.request.getDataByKey('albums', this.id).subscribe(data => {
+
+    // this.albums = this.request.app.albums.data
+    this.request.getDataByKey('albums', 'userId', this.id).subscribe(data => {
       this.albums = data;
-      console.log('this.albums, ', data)
+      console.log('this.albums, ', data);
     });
 
   }
 
   getComments(){
-    this.request.getDataByKey('posts', this.id).subscribe(data => {
-      console.log('this.comments, ',data);
+    this.request.getDataByKey('posts', 'userId', this.id).subscribe(data => {
+      console.log('this.posts, ', data);
       this.comments = data;
     });
   }

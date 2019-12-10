@@ -1,1 +1,21 @@
-<p>tabla-usuarios works!</p>
+<h1>Listado de usuarios</h1>
+<table class="tabla">
+  <thead>
+  <tr>
+    <td></td>
+    <td>USUARIO</td>
+    <td>NOMBRE Y APELLIDOS</td>
+    <td>EMAIL</td>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let usuario of usuarios" (click)="redirectToDetails(usuario.id)">
+    <td>{{ usuario.id}}</td>
+    <td>{{ usuario.username}}</td>
+    <td>{{ usuario.name}}</td>
+    <td>{{ usuario.email}}</td>
+  </tr>
+  </tbody>
+
+</table>

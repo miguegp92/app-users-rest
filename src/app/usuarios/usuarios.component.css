@@ -11,12 +11,12 @@ img{
 /*  float: right;*/
 /*}*/
 header{
-  background: #142B7D;
+  background: #555555;
   color: white;
   padding-top: 5px;
-  padding-right: 5px;
+  padding-right: 20px;
   padding-left: 5px;
-  padding-bottom: 5px;
+  padding-bottom: 20px;
 }
 
 .item1 { grid-area: header; }
@@ -30,37 +30,9 @@ header{
     'menu main main main main';
 }
 
-.tabla{
-  width: 100%;
-  /*border: 0;*/
-}
-
-.tabla thead {
-  color: dodgerblue;
-  border-bottom: darkgrey solid 1px;
-}
-
-.tabla tbody tr{
+#atras:hover{
   cursor: pointer;
-}
-
-.tabla tbody tr:hover{
   text-decoration: underline;
-  background-color: dodgerblue;
-  color: white;
+  color: blue;
 }
 
-.tabla tbody tr td{
-  padding-bottom: 15px;
-}
-
-.tabla thead tr td{
-  padding-bottom: 5px;
-}
-
-.tabla tbody tr td, .tabla thead tr td {
-  padding-top: 15px;
-}
-.tabla tbody{
-  color: #142B7D;
-}

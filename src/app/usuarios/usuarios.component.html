@@ -1,44 +1,25 @@
 <div class="grid-container">
   <div class="item1">
     <header>
-      <h4>Front end - Angular
-        <span><i class="fas fa-sign-out-alt"></i></span>
+      <h4> Front end - Angular
+        <span class="pull-right"><i class="fa fa-sign-out"></i></span>
       </h4>
 
     </header>
   </div>
   <div class="item2">
     <nav>
-      <a [routerLink]="'/'"><img src="assets/logo.png" title="SDOS" alt="SDOS"></a>
+      <a [routerLink]="'/'">  <img src="assets/logo.png" title="SDOS" alt="SDOS"></a>
       <ul>
         <li>
-          <a [routerLink]="'/dashboard'">Usuarios</a>
+          <a [routerLink]="'/dashboard'"><i class="fa fa-users"></i> Usuarios</a>
         </li>
       </ul>
 
     </nav>
   </div>
   <div class="item3">
-    <h1>Listado de usuarios</h1>
-    <table class="tabla">
-      <thead>
-      <tr>
-        <td></td>
-        <td>USUARIO</td>
-        <td>NOMBRE Y APELLIDOS</td>
-        <td>EMAIL</td>
-      </tr>
-      </thead>
-
-      <tbody>
-      <tr *ngFor="let usuario of usuarios" (click)="redirectToDetails(usuario.id)">
-        <td>{{ usuario.id}}</td>
-        <td>{{ usuario.username}}</td>
-        <td>{{ usuario.name}}</td>
-        <td>{{ usuario.email}}</td>
-      </tr>
-      </tbody>
-
-    </table>
+    <p><a (click)="volverAtras()" id="atras">Volver atrás</a></p>
+    <router-outlet></router-outlet>
   </div>
 </div>

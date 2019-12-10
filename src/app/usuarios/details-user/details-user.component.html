@@ -1,27 +1,7 @@
-<div class="grid-container">
-  <div class="item1">
-    <header>
-      <h4>Front end - Angular
-        <span><i class="fas fa-sign-out-alt"></i></span>
-      </h4>
 
-    </header>
-  </div>
-  <div class="item2">
-    <nav>
-      <a [routerLink]="'/'"><img src="assets/logo.png" title="SDOS" alt="SDOS"></a>
-      <ul>
-        <li>
-          <a [routerLink]="'/dashboard'">Usuarios</a>
-        </li>
-      </ul>
-
-    </nav>
-  </div>
-  <div class="item3">
     <h3>Editar usuario</h3>
-
-    <div class="flotante">
+<div class="grid-container">
+    <div class="item1">
       <p>
         <label for="username">Usuario</label>
         <br/>
@@ -29,7 +9,7 @@
       </p>
     </div>
 
-    <div class="flotante">
+    <div class="item2">
       <p>
         <label for="name">Nombre y apellidos</label>
         <br/>
@@ -37,7 +17,7 @@
       </p>
     </div>
 
-    <div class="flotante">
+    <div class="item3">
       <p>
         <label for="email">Email</label>
         <br/>
@@ -45,7 +25,7 @@
       </p>
     </div>
 
-    <div class="flotante">
+    <div class="item4">
       <p>
         <label for="usuario">Dirección</label>
         <br/>
@@ -53,25 +33,25 @@
       </p>
     </div>
 
-    <div class="flotante">
+    <div class="item5">
       <p>
         <label for="phone">Teléfono</label>
         <br/>
         <input type="text" id="phone" value="{{ returnFullAdress }}">
       </p>
     </div>
-    <div>
-      <h3>Albumes</h3>
 
+
+    <div class="content">
+      <h3>Albumes</h3>
+      <app-table-data [data]="albums" [tabla]="'albums'"></app-table-data>
+    </div>
+    <div class="comments">
       <h3>Entradas</h3>
+      <app-table-data [data]="comments" [tabla]="'posts'"></app-table-data>
     </div>
 
     <div class="clear">
-      <p>
         <button type="button"  class="cancelar" onClick="window.history.back()">Cancelar</button>
-      </p>
     </div>
-  </div>
 </div>
-
-

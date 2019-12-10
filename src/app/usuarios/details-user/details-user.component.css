@@ -21,15 +21,22 @@ header{
   padding-bottom: 5px;
 }
 
-.item1 { grid-area: header; }
-.item2 { grid-area: menu; }
-.item3 { grid-area: main; }
+.item1 { grid-area: left; }
+.item2 { grid-area: center; }
+.item3 { grid-area: right; }
+.item4 { grid-area: left1; }
+.item5 { grid-area: center1; }
+/*.item6 { grid-area: right1; }*/
+.content { grid-area: albums; }
+.comments { grid-area: comments; }
 
 .grid-container {
   display: grid;
   grid-template-areas:
-    'menu header header header header'
-    'menu main main main main';
+    'left center right'
+    'left1 center1 center1'
+    'albums albums albums'
+    'comments comments comments';
 }
 
 .tabla{
