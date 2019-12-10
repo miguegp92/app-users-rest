@@ -1,16 +1,2 @@
 
-div#login{
-  grid-area: login;
-}
 
-div#contenido{
-  grid-area: content;
-  height: 100%;
-  max-height: 1080px;
-}
-
-#main {
-  display: grid;
-  grid-template-areas:
-    'login content content content'
-}

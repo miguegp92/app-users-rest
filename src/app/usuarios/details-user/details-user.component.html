@@ -1,57 +1,60 @@
 
-    <h3>Editar usuario</h3>
+<h1 class="encabezado">Editar usuario</h1>
 <div class="grid-container">
     <div class="item1">
       <p>
-        <label for="username">Usuario</label>
+        <label for="username" class="texto-azul">Usuario</label>
         <br/>
-        <input type="text" id="username" value="{{ usuario.username}}">
+        <input type="text" class="input" id="username" value="{{ usuario.username}}">
       </p>
     </div>
 
     <div class="item2">
       <p>
-        <label for="name">Nombre y apellidos</label>
+        <label for="name" class="texto-azul">Nombre y apellidos</label>
         <br/>
-        <input type="text" id="name" value="{{ usuario.name}}">
+        <input type="text" class="input" id="name" value="{{ usuario.name}}">
       </p>
     </div>
 
     <div class="item3">
       <p>
-        <label for="email">Email</label>
+        <label for="email" class="texto-azul">Email</label>
         <br/>
-        <input type="text" id="email" value="{{ usuario.email}}">
+        <input type="text" class="input" id="email" value="{{ usuario.email}}">
       </p>
     </div>
 
     <div class="item4">
       <p>
-        <label for="usuario">Dirección</label>
+        <label for="usuario" class="texto-azul">Dirección</label>
         <br/>
-        <input type="text" id="usuario" value="{{ usuario.name}}">
+        <input type="text" class="input" id="usuario" value="{{ usuario.name}}">
       </p>
     </div>
 
     <div class="item5">
       <p>
-        <label for="phone">Teléfono</label>
+        <label for="phone" class="texto-azul">Teléfono</label>
         <br/>
-        <input type="text" id="phone" value="{{ returnFullAdress }}">
+        <input type="text" class="input" id="phone" value="{{ returnFullAdress }}">
       </p>
     </div>
 
-
-    <div class="content">
-      <h3>Albumes</h3>
+    <div class="item6">
+      <p><button type="button"  class="cancelar" onClick="window.history.back()">Cancelar</button></p>
+    </div>
+    <div class="albums" id="album">
+      <h3>Albums</h3>
       <app-table-data [data]="albums" [tabla]="'albums'"></app-table-data>
     </div>
-    <div class="comments">
+    <div class="posts" id="posts">
       <h3>Entradas</h3>
       <app-table-data [data]="comments" [tabla]="'posts'"></app-table-data>
     </div>
+  </div>
 
-    <div class="clear">
-        <button type="button"  class="cancelar" onClick="window.history.back()">Cancelar</button>
-    </div>
-</div>
+<!--      <div class="tab-content" id="nav-tabContent">-->
+
+
+

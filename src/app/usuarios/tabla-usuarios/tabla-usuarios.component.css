@@ -13,23 +13,26 @@
   cursor: pointer;
 }
 
-.tabla tbody tr:hover{
+.tabla tbody tr:hover td{
   text-decoration: underline;
   background-color: dodgerblue;
   color: white;
+  border: 0;
 }
 
 .tabla tbody tr td{
-  padding-bottom: 15px;
+  padding-bottom: 25px;
+  padding-top: 25px;
 }
 
 .tabla thead tr td{
   padding-bottom: 5px;
+  padding-top: 20px;
 }
 
-.tabla tbody tr td, .tabla thead tr td {
-  padding-top: 15px;
-}
+/*.tabla tbody tr td, .tabla thead tr td {*/
+/*  padding-top: 15px;*/
+/*}*/
 .tabla tbody{
   color: #142B7D;
 }

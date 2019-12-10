@@ -1,12 +1,19 @@
-<p>albums works!</p>
-<div>
-  <h2>#{{ album.id }} - {{ album.title }}</h2>
-  <div>
-    <p *ngFor="let photo of photos">
-      <a [href]="photo.url" [title]="photo.title" target="_blank"><img [src]="photo.thumbnailUrl"></a>
-    </p>
-  </div>
-  <pre>
-    {{ photos | json }}
-  </pre>
+
+<h1 class="encabezado texto-azul">Albums</h1>
+<div class="spinner-border" role="status">
+  <span class="sr-only">Loading...</span>
 </div>
+<div class="card">
+  <div class="card-body">
+    <h2 class="card-title">#{{ album.id }} - {{ album.title }}</h2>
+    <div class="row">
+      <div class="col-sm-2 text-center" *ngFor="let photo of photos">
+        <a [href]="photo.url" [title]="photo.title" target="_blank">
+          <img  [src]="photo.thumbnailUrl" [title]="photo.title" [alt]="photo.thumbnailUrl"/>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+

@@ -1,9 +1,13 @@
 .cancelar{
   float: right;
   margin-left: 10px;
-  padding: 5px;
-  background: #142B7D;
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 10px 30px;
+  /*padding: 15px;*/
+  background: slategrey;
   color: white;
+  border: 0;
 }
 img{
   width: 100px;
@@ -26,17 +30,16 @@ header{
 .item3 { grid-area: right; }
 .item4 { grid-area: left1; }
 .item5 { grid-area: center1; }
-/*.item6 { grid-area: right1; }*/
-.content { grid-area: albums; }
-.comments { grid-area: comments; }
+.item6 { grid-area: right1; }
+.album { grid-area: album; }
+.posts { grid-area: posts; }
 
 .grid-container {
   display: grid;
   grid-template-areas:
-    'left center right'
-    'left1 center1 center1'
-    'albums albums albums'
-    'comments comments comments';
+    'left left center center right right'
+    'left1 left1 center1 center1 right1 right1'
+    'album album album posts posts posts'
 }
 
 .tabla{

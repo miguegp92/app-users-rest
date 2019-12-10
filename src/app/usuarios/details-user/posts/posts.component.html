@@ -1,13 +1,17 @@
 
-<div>
-  <h2>#{{ post.id }} - {{ post.title }}</h2>
-  <h4>{{ post.body }}</h4>
-  <ul>
-    <li *ngFor="let comment of comments">
-      {{comment.id}}.- <span class="negrita">{{comment.name}}</span> por <span class="subrayado">{{comment.email}}</span>
-      <p>
-        {{comment.body}}
-      </p>
-    </li>
-  </ul>
+<h1 class="encabezado texto-azul">Entradas</h1>
+<div class="card">
+  <div class="card-body">
+    <h2 class="card-title">#{{ post.id }} - {{ post.title }}</h2>
+    <h5 class="card-subtitle mb-2 text-muted">{{ post.body }}</h5>
+    <ul class="default">
+      <li *ngFor="let comment of comments">
+        <i class="fa fa-comment-o"></i><span class="subrayado"> {{comment.email}}</span>: <span class="negrita"> {{comment.name}}</span>
+        <p class="card-text">
+          {{comment.body}}
+        </p>
+      </li>
+    </ul>
+  </div>
 </div>
+

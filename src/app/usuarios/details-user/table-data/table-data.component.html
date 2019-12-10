@@ -1,12 +1,13 @@
-<ul>
-  <li *ngFor="let element of data">
-    <a [routerLink]="tabla+'/'+element.id">{{ element.title}}</a>
-    <div *ngIf="tabla === 'posts'">
-      <p>{{ element.body}}</p>
-      <ul>
-<!--        {{ getDataFromList(element.id) }}-->
-      </ul>
-    </div>
+<div class="card">
+  <div class="card-body">
+    <ul class="default">
+      <li *ngFor="let element of data">
+        <h4 class="card-title"><a [routerLink]="tabla+'/'+element.id"><i class="fa" [ngClass]="{'fa-bookmark-o': tabla === 'posts', 'fa-book': tabla === 'albums'}"></i> {{ element.title}}</a></h4>
+        <div *ngIf="tabla === 'posts'">
+          <h5 class="card-subtitle mb-2 text-muted">{{ element.body}}</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
 
-  </li>
-</ul>

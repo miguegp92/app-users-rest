@@ -1,5 +1,5 @@
-<h1>Listado de usuarios</h1>
-<table class="tabla">
+<h1 class="encabezado">Listado de usuarios</h1>
+<table class="table tabla table-striped">
   <thead>
   <tr>
     <td></td>
@@ -8,10 +8,9 @@
     <td>EMAIL</td>
   </tr>
   </thead>
-
   <tbody>
   <tr *ngFor="let usuario of usuarios" (click)="redirectToDetails(usuario.id)">
-    <td>{{ usuario.id}}</td>
+    <td class="text-center "><a [routerLink]="['/users/'+ usuario.id]" title="Editar"><span class="fa fa-pencil clickable"></span></a></td>
     <td>{{ usuario.username}}</td>
     <td>{{ usuario.name}}</td>
     <td>{{ usuario.email}}</td>
